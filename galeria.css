@@ -1,0 +1,33 @@
+.galeria {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.galeria h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.imagenes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.imagen {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.imagen img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.imagen img:hover {
+  transform: scale(1.1);
+}
+

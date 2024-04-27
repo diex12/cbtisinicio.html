@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Login y Registro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            max-width: 300px;
+            margin: 20px auto;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Página de Inicio -->
+    <div id="inicio" style="display: block;">
+        <h1>Bienvenido</h1>
+        <p>Por favor, inicia sesión o regístrate.</p>
+        <button onclick="mostrarLogin()">Iniciar sesión</button>
+        </div>
+
+    <!-- Formulario de Login -->
+    <div id="login" style="display: none;">
+        <h1>Iniciar sesión</h1>
+        <form action="nose.3.html" method="post">
+            <input type="text" name="username" placeholder="Usuario" required>
+            <input type="password" name="password" placeholder="Contraseña" required>
+            <input type="submit" value="Iniciar sesión">
+        </form>
+    </div>
+    <!-- Perfil de Usuario -->
+    <div id="perfil" style="display: none;">
+        <h1>Perfil de Usuario</h1>
+        <p>Bienvenido, <span id="username"></span></p>
+        <button onclick="cerrarSesion()">Cerrar sesión</button>
+    </div>
+
+    <script>
+        function mostrarLogin() {
+            document.getElementById('inicio').style.display = 'none';
+            document.getElementById('login').style.display = 'block';
+        }
+
+        function mostrarRegistro() {
+            document.getElementById('inicio').style.display = 'none';
+            document.getElementById('registro').style.display = 'block';
+        }
+
+        function cerrarSesion() {
+            document.getElementById('perfil').style.display = 'none';
+            document.getElementById('inicio').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
